@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "8fb841e2-24b4-45b5-bed9-4df5df30b2ac",
+		"name": "Platzi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29254409"
+	},
+	"item": [
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijl5VkM2a0RhTjV4SzVtX0M1X0c0bCIsInVzZXJuYW1lIjoiZ29ycmFWZXJkZSIsInBhc3N3b3JkIjoiJDJiJDA1JFJHREVQZThycXZNYmhIOFJsdGhXcGVXVFhab3FjWkRGbzAxUWhOUzZtaFlZWVp3MHFaY1d5IiwiaWF0IjoxNjkyNzMyOTYxfQ.6UnLsCCuGYensE8wp3spEiWgeu_G2iiuK7AvADzX1Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/follow/Q9ja3S9hR8nYDaoYkFeY5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"follow",
+						"Q9ja3S9hR8nYDaoYkFeY5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver users seguidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Im9rWk1ja0drRjVlMF91d19xejUzNCIsInVzZXJuYW1lIjoianVhbmpvIiwicGFzc3dvcmQiOiIkMmIkMDUkbVJHNUNFODdrUDB5ZzFranVRRXhxLnp5czRLaUpxd2E1Lm44aGx2cHR0OUxIbEl2eXg2VUsiLCJpYXQiOjE2OTI3MjczNjB9.fkshX9AwQhtY7YVUNmo00HNHi-XSxDtfxhZ-KejQrLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/9yVC6kDaN5xK5m_C5_G4l/following",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"9yVC6kDaN5xK5m_C5_G4l",
+						"following"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan\",\r\n    \"username\": \"juanjo\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gorraVerde\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijl5VkM2a0RhTjV4SzVtX0M1X0c0bCIsInVzZXJuYW1lIjoiZ29ycmFWZXJkZSIsInBhc3N3b3JkIjoiJDJiJDA1JFJHREVQZThycXZNYmhIOFJsdGhXcGVXVFhab3FjWkRGbzAxUWhOUzZtaFlZWVp3MHFaY1d5IiwiaWF0IjoxNjkyNzM1NTU3fQ.NHKfhR6DUvSur9c2x0aER-6O_4qnVL5JzSM7V9XMAV8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"9yVC6kDaN5xK5m_C5_G4l\",\r\n    \"name\": \"Luigii\",\r\n    \"username\": \"gorraVerde\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MYSQL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
